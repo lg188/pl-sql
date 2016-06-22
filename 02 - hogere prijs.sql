@@ -28,6 +28,9 @@ exception
   when e_isbn_error then
     raise_application_error(-20001, 'de isbn is hoger dan 1450025896');
 end upd_bookprice;
+/
+
+exec upd_bookprice(1345005541);
 
 /* originele incorrect
 create or replace procedure  prijs_verhoging
