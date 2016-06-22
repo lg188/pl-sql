@@ -3,7 +3,7 @@
  * 1450025896 verhoogt met 15%
  */
  
-create or replace procedure upd_bookprice( p_isbn in BOEK.ISBN%type) is
+create or replace procedure upd_bookprice( p_isbn in BOEK.ISBN%type ) is
   v_isbn boek.isbn%type;
   e_isbn_error exception;
 begin
@@ -43,5 +43,4 @@ begin
     boek_rec.prijs := boek_rec.prijs * 1.15;
   end loop;
 end prijs_verhoging;
-
 */
