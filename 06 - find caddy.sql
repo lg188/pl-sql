@@ -9,14 +9,14 @@ declare
 begin
   for rec in (select datum from caddy )
   loop
-    v_date = rec.datum;
+    v_date := rec.datum;
     if(v_check = v_date) then
              v_cont := false;
-             exit
+             exit;
     end if;
   end loop;
   if(v_cont) then
-             dbms_output.print_line('datum gevonden');
+             dbms_output.put_line('datum gevonden');
   else
     raise no_data_found;
   end if;
