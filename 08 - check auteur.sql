@@ -14,6 +14,7 @@ begin
   end loop;
   if(not v_ok) then
          raise NO_DATA_FOUND;
+  end if;
 exception
   when NO_DATA_FOUND then
        raise_application_error(-2001,'no data found');
