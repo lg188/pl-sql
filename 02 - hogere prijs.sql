@@ -26,7 +26,7 @@ exception
   when no_data_found then
     raise_application_error(-20001, 'de isbn bestaat niet');
   when e_isbn_error then
-    raise_application_error(-2001, 'de isbn is hoger dan 1450025896');
+    raise_application_error(-20001, 'de isbn is hoger dan 1450025896');
 end upd_bookprice;
 
 /* originele incorrect
