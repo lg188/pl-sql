@@ -16,7 +16,7 @@ begin
       v_total := v_total + rec.prijs;
   end loop;
   v_avg := v_total / v_amount;
-  insert boek.prijs from boek  int v_prijs where isbn = p_isbn;
+  select boek.prijs   into v_prijs from boek where isbn = p_isbn;
   if(v_prijs >= v_avg) then
      return false;
   else
